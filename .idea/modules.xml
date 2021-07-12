@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DSAlogJava/DSAlogJava.iml" filepath="$PROJECT_DIR$/DSAlogJava/DSAlogJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DataStructureAndAlgorithmJava.iml" filepath="$PROJECT_DIR$/.idea/DataStructureAndAlgorithmJava.iml" />
+    </modules>
+  </component>
+</project>
