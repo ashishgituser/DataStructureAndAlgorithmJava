@@ -1,0 +1,9 @@
+Singly Linked List
+===========================
+
+SLL is a linear data structure. Items in singly linked list are called nodes.
+Each node contains data as well as location or reference to the next node.
+
+Unlike array, linked list does not pre allocate memory.
+
+We can add items to front, back and middle of the linked list as well as we can delete them.
