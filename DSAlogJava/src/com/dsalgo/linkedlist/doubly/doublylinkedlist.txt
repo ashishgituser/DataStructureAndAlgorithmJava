@@ -1,0 +1,5 @@
+Doubly Linked list
+=======================
+
+Doubly linked list is linear data structure.
+In doubly linked list, first node is connected to next node and next node is connected to previous node.
