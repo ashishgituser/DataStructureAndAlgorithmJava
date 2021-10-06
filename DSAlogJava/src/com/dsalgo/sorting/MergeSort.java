@@ -2,8 +2,6 @@ package com.dsalgo.sorting;
 
 import java.util.Arrays;
 
-import static java.lang.System.arraycopy;
-
 public class MergeSort {
 
     public static void main(String[] arg) {
@@ -13,7 +11,7 @@ public class MergeSort {
     }
 
     public static void mergeSort(int[] array, int start, int end) {
-        // Return from the recursion if we have single element array
+        // Continue recursion until start is less than end.
         if (start < end) {
             int mid = start + (end - start) / 2;
             mergeSort(array, start, mid);
@@ -27,16 +25,16 @@ public class MergeSort {
         int j = mid + 1;
         int tempIndex = 0;
 
-        int[] tempArray = new int[end - start + 1];
+        int[] temp = new int[end - start + 1];
 
         while (i <= mid && j <= end) {
-            tempArray[tempIndex++] = array[i] <= array[j] ? array[i++] : array[j++];
+            temp[tempIndex++] = array[i] < array[j] ? array[i++] : array[j++];
         }
 
-        // Copy left over from left array to input array
-        arraycopy(array, i, array, start + tempIndex, mid - (i - 1));
+        // Copy left over from left array.
+        System.arraycopy(array, i, array, start + tempIndex, mid - (i - 1));
 
-        // Copy merged temp array to original array
-        arraycopy(tempArray, 0, array, start, tempIndex);
+        // Copy entire temp array to original array.
+        System.arraycopy(temp, 0, array, start, tempIndex);
     }
 }
