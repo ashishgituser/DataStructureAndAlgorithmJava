@@ -14,6 +14,16 @@ How it works
 2. Now, we will start comparing each element from start to current element position - 1;
 3. If the element is greater than the current element, then we will shift those elements to right.
 4. At the end, we will insert the current element to it's right sorted position.
+
+Time Complexity
+======================
+
+Time Complexity: O(n^2)
+Auxiliary Space: O(1)
+Boundary Cases: Insertion sort takes maximum time to sort if elements are sorted in reverse order. And it takes minimum time (Order of n) when elements are already sorted.
+Algorithmic Paradigm: Incremental Approach
+Sorting In Place: Yes
+Stable: Yes
  */
 
 import java.util.Arrays;
