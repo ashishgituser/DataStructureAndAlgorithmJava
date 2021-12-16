@@ -1,0 +1,45 @@
+About Fenwick
+==================
+
+Fenwick tree (also called binary indexed tree) is a data structure that supports sum range queries as well as setting
+values in a static array and getting value of prefix sum up some index efficiently.
+
+Unlike a regular array, in a fenwick tree a specific cell is responsible for other cells as well. (tree)
+
+In a fenwick tree, we may compute the prefix sum up to a certain index, which ultimately lets us perform range
+sum queries.
+
+A  | Index | Binary | Fenwick Tree |
+-- | ----- | ------ | ------------ |
+5  | 1     | 00001  | 5            |
+2  | 2     | 00010  | 7            |
+9  | 3     | 00011  | 9            |
+-3 | 4     | 00100  | 13           |
+5  | 5     | 00101  | 5            |
+20 | 6     | 00110  | 25           |
+10 | 7     | 00111  | 10           |
+-7 | 8     | 01000  | 41           |
+2  | 9     | 01001  | 2            |
+3  | 10    | 01010  | 5            |
+-4 | 11    | 01011  | -4           |
+0  | 12    | 01100  | 1            |
+-2 | 13    | 01101  | -2           |
+15 | 14    | 01110  | 13           |
+5  | 15    | 01111  | 5            |
+-----------------------------------|
+
+We start by the lest significant bit (start from right), start creating the prefix sum array by checking the 1 bit from
+right to left.
+
+00001 -> array[0] -> 5
+
+Complexity Analysis
+================
+
+Construction -> O(n)
+Point Update -> O(lng(n))
+Range sum    -> O(log(n))
+Range update -> O(log(n))
+Adding index -> N/A
+Remove Index -> N/A (Adding and remove is not supported or necessary)
+
